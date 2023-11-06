@@ -80,7 +80,7 @@ global with sharing class ContactRestRessource {
         //récupère la demande (request) HTTP entrante
         RestRequest request = RestContext.request;
 
-// désérialise le corps de la demande JSON en utilisant la méthode JSON.deserializeUntyped pour obtenir les paires nom-valeur.
+        // désérialise le corps de la demande JSON en utilisant la méthode JSON.deserializeUntyped pour obtenir les paires nom-valeur.
         Map<String, Object> params = (Map<String, Object>)JSON.deserializeUntyped(request.requestbody.tostring());
         System.debug(params);
         List<Object> enregistrements =(List<Object>) params.get('records');
